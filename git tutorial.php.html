@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>git commands</h1>
+check version :git --version
+enter username:λ git config --global user.name ulasivinent
+enter email:λ git config --global user.email saitek3032@gmail.com
+
+chang directory cd (shows git installation  folder)
+:cd ..
+
+
+change to a particuler directory eg \Users\ezeem\Desktop\commander
+:cd commander
+
+list the content of current directory
+:ls 
+
+make a new directory(eg newdir) inside commander
+mkdir newdir
+
+upper directory eg commander
+cd .. 
+
+to select any f the directory (eg newdir) use cd dirname
+cd newdir
+
+make a new file in any directory eg newdir directory
+touch newfile.php
+
+press ls to see new file
+:ls 
+
+open this file with any text editor eg atom 
+atom.newfile.php 
+
+delete a file eg newfile.php 
+: rm newfile.php
+
+go up directory 
+cd ..
+
+delete directory eg newdir 
+: rmdir newdir 
+
+copy and paste directry path eg C:\xampp\htdocs 
+cd C:\xampp\htdocs 
+
+use the current dir as ur repository 
+:git init 
+
+any diretory u great as repo,file being traced turns green <br>
+git track all file and file in subdirectory of the repo folder.the green color means the file was changed or modified but not 
+commited, you must move a file in the staging area b4 pressing commit.ie all staged file will be commited when commit is pressed.
+modified =green 
+
+to see modified,staged,commited 
+:git status
+
+use add to add a file(eg txt.txt) to staging area for commits 
+:git add txt.txt
+
+to remove a staged file eg txt.txt 
+git rm --cached txt.txt
+
+add all file in a folder to staging area 
+:git add . 
+
+
+</body>
+</html>
