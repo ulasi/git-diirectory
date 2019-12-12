@@ -169,6 +169,21 @@ to merge a branch to master,first switch to master branch the merge
 we branched from master to another branch and made some progress, when we merge that branch to master,very progree and changes we made in every file and folder 
 will update in the master branch.ie when we merge a new commit is created in commit histry with the updates 
 
+    <!------------------------------conflict----------------------------------------------------->
+beware of making diferent changes on same element style in differnt branches, when u merge two
+branches with different style for one elemnt,conflict message appears asking u to make ur choice
+and commit it.
+
+<style>
+    <<<<<<< HEAD
+    h1{
+        color:red;
+    }
+    =======
+    color:yellow;
+    padding:2px;
+    >>>>>>> newbra
+    </style>
 
 
 
@@ -177,9 +192,6 @@ will update in the master branch.ie when we merge a new commit is created in com
 
 
 
-
-
-    <!----------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------->
     <!----------------------------------------------------------------------------------->
