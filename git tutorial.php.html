@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>git commands</h1>
+    <!--------------------------------directory works--------------------------------------------------->
 check version :git --version
 enter username:λ git config --global user.name ulasivinent
 enter email:λ git config --global user.email saitek3032@gmail.com
@@ -58,6 +59,7 @@ any diretory u great as repo,file being traced turns green <br>
 git track all file and file in subdirectory of the repo folder.the green color means the file was changed or modified but not 
 commited, you must move a file in the staging area b4 pressing commit.ie all staged file will be commited when commit is pressed.
 modified =green 
+    <!----------------------------------staging and commit------------------------------------------------->
 
 to see modified,staged,commited 
 :git status
@@ -71,6 +73,105 @@ git rm --cached txt.txt
 add all file in a folder to staging area 
 :git add . 
 
+commiting staged file
+-m mean message,the note helps u remember the changes u added from last commit 
+:git commit -m "note of changes u made"
+
+commited files changes to orange,u get a meesge showing 
+commit message 
+id of the commit 
+fiels changd :number of file commited 
+insertions: code lines that changed
+deletion: number of lines u deleted  
+commit color:orange 
+
+see all commits 
+
+:git log
+
+the above giv adetail info with long commit ids ,press q to return to cmd input 
+for shorter info,use 
+
+:git log --oneline
+this list short id with the messge reminder 
+    <!-------------------selecting commit------------------rewinding tracking back to use---------------------------------------------->
+
+rewinding ,undoing to a particular commit stage,
+there are 3 approach to going back to a commit history 
+
+1)checkout commit:safest, the commit history is unaltered 
+2) revert commit deletes only the reverted commit,leaving the rest of the stages 
+3)reset commit: reset the whole commit history to the a particular stage or commit u choosed 
+
+so use 
+:git log --oneline
+to list the ids
+
+code for checkout commited 
+:git checkout commit_id 
+
+the HEAD tag is giving to the latest commit u made
+rewinfing to a previous comit detaches the head from the master(most recent commit) to that commit 
+to go back to master use
+: git checkout master 
+
+revert 
+: git revert commit-id 
+this brings up promppt to enter commit messege,ignore it and press shift+;
+: :wq
+this return u to the command interface 
+on pressing git log --oneline ul notice a new commit is created as HEAD and former one still retained 
+the new commit actually revert all changes u do in the old commit 
+
+reset commit ,there are two forms of this 
+
+1)below form delete  our commit history to the commit selected
+but it still retains our head or master.ie our current work b4 the revert 
+this is good if u want to add all ur comit to one ,ie current progress 
+:git reset commit_id 
+
+2)below form will not retain our current progress,do at ur own risk
+:git reset commit_id --hard
+
+    <!------------------------------------BRANCHING----------------------------------------------->
+
+ctreating branches 
+the master branche is the main commit history 
+we can create a branch of history out of the master branch 
+use this code to list branches (notice only master branch is listed ),active branch is in green
+:git branch -a 
+
+create  a branch (eg branche1)
+:git branch branch-Name 
+
+to use or change to another branch (eg branche1)
+:git checkout branch_name
+
+to create a branch and switch to it at once 
+:git checkout -b branch_name 
+
+
+deleting a branch 
+first change to another branch use the below codes 
+git branch -d branche1 
+git branch -D branche1 (if the branch is not mearged yet )
+
+
+
+
+
+
+
+
+
+    <!----------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------->
+    <!----------------------------------------------------------------------------------->
 
 </body>
 </html>
